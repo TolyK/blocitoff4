@@ -15,6 +15,9 @@
         
         <% if logged_in? %>
             <li class="navbar-right"><%= link_to "Log out", logout_path, method: "delete" %></li>
+            <% if @list.nil? %>
+              <li class="navbar-right"><%= link_to "New TO-DO List", new_list_path %></li>
+             <% end %>
         <% else %>
             <li class="navbar-right"><%= link_to "Sign Up", signup_path %></li>
             <li class="navbar-right"><%= link_to "Sign In", login_path %></li>

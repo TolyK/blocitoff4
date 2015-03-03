@@ -1,0 +1,15 @@
+<h1>Create Your List</h1>
+
+<div class="row">
+    <%= form_for(@list) do |f| %>
+    <div class="field">
+      <%= f.label :title %>
+      <%= f.text_field :title %>
+    </div>
+    
+    <div class="actions">
+      <%= f.submit "Create the List" %>
+    </div>
+    
+    <% end %>
+</div>
